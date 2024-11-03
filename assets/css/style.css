@@ -1,0 +1,406 @@
+:root {
+    --red : #D52027;
+    --bc : #141024;
+}
+
+body, html {
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+/* Header */
+
+.header{
+    padding: 30px 100px;
+    background-color: var(--bc);
+    max-width: 1920px;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content a {
+    text-decoration: none;
+    color: #FFF;
+    margin-right: 40px;
+    line-height: 32px;
+}
+
+.header-content a:last-child {
+    margin-right: 0;
+}
+
+.header-content p {
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Main */
+.main {
+    background-color: var(--bc);
+}
+
+.main .container{
+    max-width: 1350px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content_info {
+    margin-top: 260px;
+}
+
+.main-content_info h2 {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 112px;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.main-content_info p {
+    line-height: 32px;
+    color: #FFF;
+    margin-bottom: 50px;
+}
+
+.button {
+    padding: 25px 55px;
+    background-color: var(--red);
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    align-items: center;
+}
+
+.main-content img {
+    display: block;
+    margin-top: 90px;
+    width: 783px;
+    height: 917px;
+}
+
+/* Info */
+
+.info-content strong{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 48px;
+}
+.info-content .info-title{
+    width: 900px;
+    font-size: 30px;
+    line-height: 48px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+.info-content_block {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+
+.info-content_block h3 {
+    color: var(--red);
+    font-size: 70px;
+    line-height: 112px;
+    font-weight: 600;
+}
+
+.info-content_block p {
+    font-size: 18px;
+    line-height: 28px;
+    
+}
+
+/* Profit */
+
+.profit {
+    background-color: #F9F9F9;
+    padding-top: 40px; 
+}
+
+.profit-main {
+    display: inline-block;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 80px;
+}
+
+.profit-content_blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profit-content_blocks h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 20px;
+}
+
+.profit-content_blocks p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 100px;
+}
+
+
+.trainers h2 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 80px;
+    color: var(--bc);
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    width: 200px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+}
+
+.trainer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.trainer-card p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.trainer-card span {
+    color: gray;
+}
+
+.trainer-card a {
+    color: var(--red);
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Модальное окно */
+#modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 80%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bc);
+    text-decoration: none;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.modal-body {
+    color: var(--bc);
+}
+
+.trainers h2 {
+    font-size: 2em;
+    color: var(--bc);
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    width: 200px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+}
+
+.trainer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.trainer-card p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.trainer-card span {
+    color: gray;
+}
+
+.trainer-card a {
+    color: var(--red);
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Модальное окно */
+#modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 80%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bc);
+    text-decoration: none;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.modal-body {
+    color: var(--bc);
+}
+
+
+
+
+
+
